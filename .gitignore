@@ -1,4 +1,6 @@
 # Ignore local secret configuration files
+server/.env
+server/node_modules/
 config.js
 .env
 
