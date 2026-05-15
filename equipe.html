@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe | Iron Peak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">IRON PEAK</a>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="horarios.html">Horários</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="equipe.html" class="active">Equipe</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <h1 class="text-center reveal" style="margin-bottom: 20px; margin-top: 40px;">Nossa <span class="text-accent">Equipe</span></h1>
+            <p class="text-center reveal" style="color: var(--text-secondary); margin-bottom: 50px;">Profissionais altamente qualificados para guiar sua evolução.</p>
+
+            <!-- Team Grid -->
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-card reveal" data-name="Marcos Reus" data-formation="Pós-graduado em Fisiologia do Exercício pela USP. Especialista em treinamento de força e hipertrofia com 10 anos de experiência prática no mercado fitness.">
+                    <img src="https://i.pravatar.cc/300?img=1" alt="Instrutor">
+                    <div class="team-info">
+                        <h3>Marcos Reus</h3>
+                        <span class="text-accent">Musculação / Hipertrofia</span>
+                        <p>Especialista em treinamento de força com 10 anos de experiência.</p>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="team-card reveal" data-name="Julia Mendonça" data-formation="Bacharel em Educação Física, com certificação internacional em Treinamento Funcional e HIIT. Focada em resultados rápidos e saúde preventiva.">
+                    <img src="https://i.pravatar.cc/300?img=2" alt="Instrutora">
+                    <div class="team-info">
+                        <h3>Julia Mendonça</h3>
+                        <span class="text-accent">Musculação / Funcional</span>
+                        <p>Focada em emagrecimento e condicionamento físico feminino.</p>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="team-card reveal" data-name="Mestre Silva" data-formation="Faixa preta 4º grau de Jiu-Jitsu. Certificado pela CBJJ e com experiência internacional em competições e formação de atletas de alto rendimento.">
+                    <img src="https://i.pravatar.cc/300?img=3" alt="Professor">
+                    <div class="team-info">
+                        <h3>Mestre Silva</h3>
+                        <span class="text-accent">Jiu-Jitsu / Lutas</span>
+                        <p>Faixa preta 4º grau, formador de campeões nacionais.</p>
+                    </div>
+                </div>
+                <!-- Member 4 -->
+                <div class="team-card reveal" data-name="Beatriz Lins" data-formation="Formação em Rishikesh (Índia), certificada pela Yoga Alliance (500h RYT). Especialista em Vinyasa Yoga e meditação guiada para atletas.">
+                    <img src="https://i.pravatar.cc/300?img=4" alt="Professora">
+                    <div class="team-info">
+                        <h3>Beatriz Lins</h3>
+                        <span class="text-accent">Yoga / Mobilidade</span>
+                        <p>Especialista em Vinyasa Yoga e técnicas de respiração.</p>
+                    </div>
+                </div>
+                <!-- Member 5 -->
+                <div class="team-card reveal" data-name="Ana Paula" data-formation="Graduada em Fisioterapia, Especialista em Quiropraxia e Liberação Miofascial. Focada em prevenção de lesões e performance muscular.">
+                    <img src="https://i.pravatar.cc/300?img=5" alt="Massoterapeuta">
+                    <div class="team-info">
+                        <h3>Ana Paula</h3>
+                        <span class="text-accent">Massoterapia / Recovery</span>
+                        <p>Especialista em liberação miofascial e recuperação muscular.</p>
+                    </div>
+                </div>
+                <!-- Member 6 -->
+                <div class="team-card reveal" data-name="Lucas Viana" data-formation="Mestrado em Performance Esportiva. Consultor técnico de diversos atletas profissionais, unindo ciência e prática para resultados de elite.">
+                    <img src="https://i.pravatar.cc/300?img=6" alt="Personal Trainer">
+                    <div class="team-info">
+                        <h3>Lucas Viana</h3>
+                        <span class="text-accent">Personal Trainer</span>
+                        <p>Consultoria esportiva personalizada para atletas de elite.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher Modal -->
+            <div id="teacherModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2 id="teacherModalName" class="text-accent">Nome do Professor</h2>
+                    <div id="teacherModalBody">
+                        <p id="teacherFormation" style="margin-top: 20px; font-size: 1.1rem; line-height: 1.8;"></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Gallery Section -->
+            <h2 class="text-center reveal" style="margin: 80px 0 40px;">Nossa <span class="text-accent">Estrutura</span></h2>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym 1"></div>
+                <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Gym 2"></div>
+                <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=600&q=80" alt="Gym 3"></div>
+                <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=600&q=80" alt="Gym 4"></div>
+                <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1574673139762-014a1efec4b7?auto=format&fit=crop&w=600&q=80" alt="Gym 5"></div>
+                <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&q=80" alt="Gym 6"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo">IRON PEAK</h3>
+                    <p>Sua jornada para a excelência física começa aqui.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Endereço</h3>
+                    <p>Rua Tabosa Facundo - Centro</p>
+                    <p>Canindé - CE, CEP 62700</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>(85) 99999-9999</p>
+                    <p>contato@ironpeak.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Iron Peak Gym. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="chatbot.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Iron Peak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">IRON PEAK</a>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="horarios.html">Horários</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <h1 class="text-center reveal" style="margin-bottom: 20px; margin-top: 40px;">Fale <span class="text-accent">Conosco</span></h1>
+            <p class="text-center reveal" style="color: var(--text-secondary); margin-bottom: 50px;">Tire suas dúvidas ou agende uma visita à nossa unidade.</p>
+
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info reveal">
+                    <div class="contact-card">
+                        <h3>Localização</h3>
+                        <p>Rua Tabosa Facundo - Centro</p>
+                        <p>Canindé - CE, CEP 62700</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Canais de Venda</h3>
+                        <p>Telefone: (85) 3343-0000</p>
+                        <p>WhatsApp: (85) 99999-9999</p>
+                        <p>E-mail: matriculas@ironpeak.com.br</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Funcionamento</h3>
+                        <p>Segunda a Sexta: 06h às 23h</p>
+                        <p>Sábado: 08h às 18h</p>
+                        <p>Domingo e Feriados: 09h às 14h</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container reveal">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" placeholder="Ex: João Silva" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" placeholder="seu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="text" id="phone" placeholder="(11) 00000-0000" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="plan">Plano de Interesse</label>
+                                <select id="plan" required>
+                                    <option value="" disabled selected>Selecione um plano</option>
+                                    <optgroup label="Combos Mensais">
+                                        <option value="basico">Básico — R$ 79,90/mês</option>
+                                        <option value="pro">Pro — R$ 109,90/mês</option>
+                                        <option value="elite">Elite — R$ 169,90/mês</option>
+                                    </optgroup>
+                                    <optgroup label="Modalidade Avulsa">
+                                        <option value="musculacao">Musculação Solo — R$ 79,90/mês</option>
+                                        <option value="jiu-jitsu">Jiu-Jitsu — R$ 89,90/mês</option>
+                                        <option value="boxe">Boxe — R$ 79,90/mês</option>
+                                        <option value="cross">Cross Training — R$ 89,90/mês</option>
+                                        <option value="funcional">Funcional — R$ 69,90/mês</option>
+                                        <option value="yoga">Yoga — R$ 69,90/mês</option>
+                                        <option value="spinning">Spinning — R$ 69,90/mês</option>
+                                        <option value="massagem">Pacote Massagem — R$ 199,90/mês</option>
+                                    </optgroup>
+                                    <optgroup label="Avulso">
+                                        <option value="diaria">Diária</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="modalities">Modalidades de interesse <small style="color: var(--text-secondary); font-weight: 400;">(opcional)</small></label>
+                                <select id="modalities" multiple>
+                                    <option value="musculacao">Musculação</option>
+                                    <option value="jiu-jitsu">Jiu-Jitsu</option>
+                                    <option value="boxe">Boxe</option>
+                                    <option value="cross">Cross Training</option>
+                                    <option value="funcional">Funcional</option>
+                                    <option value="spinning">Spinning</option>
+                                    <option value="yoga">Yoga</option>
+                                    <option value="massagem">Massagem</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" rows="5" placeholder="Como podemos te ajudar?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+                    </form>
+                    <div id="successMsg" class="success-message">
+                        <h3>Mensagem Enviada!</h3>
+                        <p>Em breve um de nossos consultores entrará em contato.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container reveal" style="margin-top: 80px;">
+                <iframe src="https://maps.google.com/maps?q=Rua%20Tabosa%20Facundo%2C%20Centro%2C%20Canind%C3%A9%20-%20CE%2C%2062700&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo">IRON PEAK</h3>
+                    <p>Sua jornada para a excelência física começa aqui.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Endereço</h3>
+                    <p>Rua Tabosa Facundo - Centro</p>
+                    <p>Canindé - CE, CEP 62700</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>(85) 99999-9999</p>
+                    <p>contato@ironpeak.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Iron Peak Gym. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="chatbot.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários | Iron Peak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">IRON PEAK</a>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="horarios.html" class="active">Horários</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <h1 class="text-center reveal" style="margin-bottom: 20px; margin-top: 40px;">Grade de <span class="text-accent">Horários</span></h1>
+            <p class="text-center reveal" style="color: var(--text-secondary); margin-bottom: 40px;">Filtre por modalidade e encontre o melhor horário para seu treino.</p>
+
+            <!-- Musculação Free Banner -->
+            <div class="musc-banner reveal">
+                <div class="musc-banner-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 6.5h11"/><path d="M6.5 17.5h11"/>
+                        <rect x="2" y="9" width="3" height="6" rx="1"/>
+                        <rect x="19" y="9" width="3" height="6" rx="1"/>
+                        <rect x="5" y="7" width="2" height="10" rx="0.5"/>
+                        <rect x="17" y="7" width="2" height="10" rx="0.5"/>
+                        <path d="M7 12h10"/>
+                    </svg>
+                </div>
+                <div class="musc-banner-text">
+                    <h3>Musculação <span class="text-accent">sem horário fixo</span></h3>
+                    <p>A sala de musculação fica aberta durante <strong>todo o funcionamento da academia</strong>. Não precisa reservar — é só chegar e treinar.</p>
+                </div>
+                <div class="musc-banner-hours">
+                    <span><strong>Seg–Sex</strong> 06h–23h</span>
+                    <span><strong>Sábado</strong> 08h–18h</span>
+                    <span><strong>Domingo</strong> 09h–14h</span>
+                </div>
+            </div>
+
+            <h2 class="text-center reveal" style="margin: 60px 0 14px; font-size: 1.6rem;">Aulas <span class="text-accent">Coletivas e Lutas</span></h2>
+            <p class="text-center reveal" style="color: var(--text-secondary); margin-bottom: 36px; font-size: 0.95rem;">Aulas com vagas limitadas. Reserve a sua antes!</p>
+
+            <!-- Filters -->
+            <div class="filters reveal" role="tablist" aria-label="Filtrar por modalidade">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="jiu-jitsu">Jiu-Jitsu</button>
+                <button class="filter-btn" data-filter="funcional">Funcional</button>
+                <button class="filter-btn" data-filter="spinning">Spinning</button>
+                <button class="filter-btn" data-filter="yoga">Yoga</button>
+                <button class="filter-btn" data-filter="massagem">Massagem</button>
+            </div>
+
+            <!-- Day Tabs (mobile only) -->
+            <div class="day-tabs reveal" role="tablist" aria-label="Selecionar dia">
+                <button class="day-tab active" data-day="seg">Seg</button>
+                <button class="day-tab" data-day="ter">Ter</button>
+                <button class="day-tab" data-day="qua">Qua</button>
+                <button class="day-tab" data-day="qui">Qui</button>
+                <button class="day-tab" data-day="sex">Sex</button>
+                <button class="day-tab" data-day="sab">Sáb</button>
+            </div>
+
+            <!-- Schedule Grid (cards by day) -->
+            <div class="schedule-grid reveal">
+                <!-- Segunda -->
+                <div class="day-column" data-day="seg">
+                    <h3 class="day-title">Segunda</h3>
+                    <div class="class-cell" data-type="funcional" data-name="Funcional" data-prof="Carlos" data-vagas="15" data-total="20" data-dur="60min">
+                        <span class="cc-time">07:00</span>
+                        <span class="cc-name">Funcional</span>
+                        <span class="cc-meta">Carlos · 60min</span>
+                        <span class="cc-badge available">5 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="funcional" data-name="Funcional" data-prof="Carlos" data-vagas="18" data-total="20" data-dur="60min">
+                        <span class="cc-time">18:00</span>
+                        <span class="cc-name">Funcional</span>
+                        <span class="cc-meta">Carlos · 60min</span>
+                        <span class="cc-badge near-full">2 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="jiu-jitsu" data-name="Jiu-Jitsu" data-prof="Mestre Silva" data-vagas="22" data-total="30" data-dur="90min">
+                        <span class="cc-time">19:00</span>
+                        <span class="cc-name">Jiu-Jitsu</span>
+                        <span class="cc-meta">Mestre Silva · 90min</span>
+                        <span class="cc-badge available">8 vagas</span>
+                    </div>
+                </div>
+
+                <!-- Terça -->
+                <div class="day-column" data-day="ter">
+                    <h3 class="day-title">Terça</h3>
+                    <div class="class-cell" data-type="spinning" data-name="Spinning" data-prof="Letícia" data-vagas="14" data-total="20" data-dur="50min">
+                        <span class="cc-time">07:00</span>
+                        <span class="cc-name">Spinning</span>
+                        <span class="cc-meta">Letícia · 50min</span>
+                        <span class="cc-badge available">6 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="massagem" data-name="Massagem" data-prof="Ana" data-vagas="1" data-total="1" data-dur="50min">
+                        <span class="cc-time">10:00</span>
+                        <span class="cc-name">Massagem</span>
+                        <span class="cc-meta">Ana · 50min</span>
+                        <span class="cc-badge full">Lotada</span>
+                    </div>
+                    <div class="class-cell" data-type="spinning" data-name="Spinning" data-prof="Letícia" data-vagas="19" data-total="20" data-dur="50min">
+                        <span class="cc-time">18:00</span>
+                        <span class="cc-name">Spinning</span>
+                        <span class="cc-meta">Letícia · 50min</span>
+                        <span class="cc-badge near-full">1 vaga</span>
+                    </div>
+                </div>
+
+                <!-- Quarta -->
+                <div class="day-column" data-day="qua">
+                    <h3 class="day-title">Quarta</h3>
+                    <div class="class-cell" data-type="funcional" data-name="Funcional" data-prof="Carlos" data-vagas="10" data-total="20" data-dur="60min">
+                        <span class="cc-time">07:00</span>
+                        <span class="cc-name">Funcional</span>
+                        <span class="cc-meta">Carlos · 60min</span>
+                        <span class="cc-badge available">10 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="funcional" data-name="Funcional" data-prof="Carlos" data-vagas="16" data-total="20" data-dur="60min">
+                        <span class="cc-time">18:00</span>
+                        <span class="cc-name">Funcional</span>
+                        <span class="cc-meta">Carlos · 60min</span>
+                        <span class="cc-badge available">4 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="jiu-jitsu" data-name="Jiu-Jitsu" data-prof="Mestre Silva" data-vagas="25" data-total="30" data-dur="90min">
+                        <span class="cc-time">19:00</span>
+                        <span class="cc-name">Jiu-Jitsu</span>
+                        <span class="cc-meta">Mestre Silva · 90min</span>
+                        <span class="cc-badge available">5 vagas</span>
+                    </div>
+                </div>
+
+                <!-- Quinta -->
+                <div class="day-column" data-day="qui">
+                    <h3 class="day-title">Quinta</h3>
+                    <div class="class-cell" data-type="spinning" data-name="Spinning" data-prof="Letícia" data-vagas="12" data-total="20" data-dur="50min">
+                        <span class="cc-time">07:00</span>
+                        <span class="cc-name">Spinning</span>
+                        <span class="cc-meta">Letícia · 50min</span>
+                        <span class="cc-badge available">8 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="massagem" data-name="Massagem" data-prof="Ana" data-vagas="0" data-total="1" data-dur="50min">
+                        <span class="cc-time">10:00</span>
+                        <span class="cc-name">Massagem</span>
+                        <span class="cc-meta">Ana · 50min</span>
+                        <span class="cc-badge available">1 vaga</span>
+                    </div>
+                    <div class="class-cell" data-type="spinning" data-name="Spinning" data-prof="Letícia" data-vagas="20" data-total="20" data-dur="50min">
+                        <span class="cc-time">18:00</span>
+                        <span class="cc-name">Spinning</span>
+                        <span class="cc-meta">Letícia · 50min</span>
+                        <span class="cc-badge full">Lotada</span>
+                    </div>
+                </div>
+
+                <!-- Sexta -->
+                <div class="day-column" data-day="sex">
+                    <h3 class="day-title">Sexta</h3>
+                    <div class="class-cell" data-type="funcional" data-name="Funcional" data-prof="Carlos" data-vagas="13" data-total="20" data-dur="60min">
+                        <span class="cc-time">07:00</span>
+                        <span class="cc-name">Funcional</span>
+                        <span class="cc-meta">Carlos · 60min</span>
+                        <span class="cc-badge available">7 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="funcional" data-name="Funcional" data-prof="Carlos" data-vagas="17" data-total="20" data-dur="60min">
+                        <span class="cc-time">18:00</span>
+                        <span class="cc-name">Funcional</span>
+                        <span class="cc-meta">Carlos · 60min</span>
+                        <span class="cc-badge near-full">3 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="jiu-jitsu" data-name="Jiu-Jitsu" data-prof="Mestre Silva" data-vagas="20" data-total="30" data-dur="90min">
+                        <span class="cc-time">19:00</span>
+                        <span class="cc-name">Jiu-Jitsu</span>
+                        <span class="cc-meta">Mestre Silva · 90min</span>
+                        <span class="cc-badge available">10 vagas</span>
+                    </div>
+                </div>
+
+                <!-- Sábado -->
+                <div class="day-column" data-day="sab">
+                    <h3 class="day-title">Sábado</h3>
+                    <div class="class-cell" data-type="yoga" data-name="Yoga" data-prof="Beatriz" data-vagas="8" data-total="12" data-dur="75min">
+                        <span class="cc-time">09:00</span>
+                        <span class="cc-name">Yoga</span>
+                        <span class="cc-meta">Beatriz · 75min</span>
+                        <span class="cc-badge available">4 vagas</span>
+                    </div>
+                    <div class="class-cell" data-type="jiu-jitsu" data-name="Jiu-Jitsu" data-prof="Mestre Silva" data-vagas="18" data-total="30" data-dur="90min">
+                        <span class="cc-time">10:00</span>
+                        <span class="cc-name">Jiu-Jitsu</span>
+                        <span class="cc-meta">Mestre Silva · 90min</span>
+                        <span class="cc-badge available">12 vagas</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="reveal schedule-note">Aulas com vagas limitadas — clique no card para ver detalhes e reservar.</p>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="classModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle" class="text-accent">Detalhes da Aula</h2>
+            <div id="modalBody">
+                <p><strong>Professor:</strong> <span id="profName"></span></p>
+                <p><strong>Duração:</strong> <span id="duration"></span></p>
+                <p><strong>Vagas disponíveis:</strong> <span id="slots"></span></p>
+                <div class="slots-bar" aria-hidden="true">
+                    <div class="slots-bar-fill" id="slotsBarFill"></div>
+                </div>
+                <p style="margin-top: 20px;">Traga sua toalha e garrafa de água. Chegue com 10 minutos de antecedência.</p>
+                <a href="contato.html" class="btn btn-primary" style="margin-top: 30px; width: 100%; text-align: center;">Reservar Vaga</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo">IRON PEAK</h3>
+                    <p>Sua jornada para a excelência física começa aqui.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Endereço</h3>
+                    <p>Rua Tabosa Facundo - Centro</p>
+                    <p>Canindé - CE, CEP 62700</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>(85) 99999-9999</p>
+                    <p>contato@ironpeak.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Iron Peak Gym. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="chatbot.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

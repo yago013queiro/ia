@@ -1,0 +1,7 @@
+# Ignore local secret configuration files
+config.js
+.env
+
+# Ignore IDE and system files
+.DS_Store
+Thumbs.db

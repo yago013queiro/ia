@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos | Iron Peak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">IRON PEAK</a>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="horarios.html">Horários</a></li>
+                    <li><a href="planos.html" class="active">Planos</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <h1 class="text-center reveal" style="margin-bottom: 20px; margin-top: 40px;">Escolha seu <span class="text-accent">Plano</span></h1>
+            <p class="text-center reveal" style="color: var(--text-secondary); margin-bottom: 40px;">Temos a opção ideal para o seu nível de comprometimento.</p>
+
+            <!-- Price Toggle -->
+            <div class="toggle-container reveal">
+                <span>Mensal</span>
+                <label class="switch">
+                    <input type="checkbox" id="priceToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Anual <small class="text-accent">(-15%)</small></span>
+            </div>
+
+            <!-- Plan Tabs -->
+            <div class="plan-tabs reveal" role="tablist" aria-label="Tipo de plano">
+                <button class="plan-tab active" data-tab="combos">Combos</button>
+                <button class="plan-tab" data-tab="solo">Modalidade Avulsa</button>
+                <button class="plan-tab" data-tab="diarias">Diárias</button>
+            </div>
+
+            <!-- Combos -->
+            <div class="plan-section active" data-section="combos">
+                <p class="text-center reveal" style="color: var(--text-secondary); margin-bottom: 30px; font-size: 0.95rem;">Pacotes mensais com acesso a múltiplas modalidades. <span class="text-accent">Maior economia.</span></p>
+                <div class="plans-grid">
+                    <!-- Básico -->
+                    <div class="plan-card reveal">
+                        <h3>Básico</h3>
+                        <div class="price">R$ <span class="amount" data-monthly="79.90">79,90</span><small>/mês</small></div>
+                        <p class="plan-tagline">Somente musculação</p>
+                        <ul class="plan-features">
+                            <li>Musculação livre (horário de funcionamento)</li>
+                            <li>Vestiário completo</li>
+                            <li>App de treinos</li>
+                            <li>Avaliação física inicial</li>
+                            <li class="disabled">Aulas coletivas</li>
+                            <li class="disabled">Lutas e massagem</li>
+                        </ul>
+                        <a href="contato.html?plano=basico" class="btn btn-outline">Assinar Básico</a>
+                    </div>
+
+                    <!-- Pro -->
+                    <div class="plan-card featured reveal">
+                        <div class="badge">Mais Popular</div>
+                        <h3>Pro</h3>
+                        <div class="price">R$ <span class="amount" data-monthly="109.90">109,90</span><small>/mês</small></div>
+                        <p class="plan-tagline">Musculação + aulas coletivas</p>
+                        <ul class="plan-features">
+                            <li>Musculação livre</li>
+                            <li>Yoga, Funcional e Spinning ilimitados</li>
+                            <li>App de treinos</li>
+                            <li>Avaliação física trimestral</li>
+                            <li>Acompanhamento de instrutor</li>
+                            <li class="disabled">Lutas e massagem</li>
+                        </ul>
+                        <a href="contato.html?plano=pro" class="btn btn-primary">Assinar Pro</a>
+                    </div>
+
+                    <!-- Elite -->
+                    <div class="plan-card reveal">
+                        <h3>Elite</h3>
+                        <div class="price">R$ <span class="amount" data-monthly="169.90">169,90</span><small>/mês</small></div>
+                        <p class="plan-tagline">Acesso total + lutas + massagem</p>
+                        <ul class="plan-features">
+                            <li>Tudo do plano Pro</li>
+                            <li>Jiu-Jitsu, Boxe e Cross Training</li>
+                            <li>1 massagem terapêutica/mês</li>
+                            <li>Avaliação física mensal</li>
+                            <li>Prioridade em reservas</li>
+                            <li>Camiseta Iron Peak de boas-vindas</li>
+                        </ul>
+                        <a href="contato.html?plano=elite" class="btn btn-outline">Assinar Elite</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modalidade Avulsa -->
+            <div class="plan-section" data-section="solo">
+                <p class="text-center reveal" style="color: var(--text-secondary); margin-bottom: 30px; font-size: 0.95rem;">Quer treinar só <span class="text-accent">uma modalidade?</span> Pague apenas pelo que usa.</p>
+                <div class="solo-grid">
+                    <div class="solo-card reveal" data-mod="jiu-jitsu">
+                        <div class="solo-card-img" style="background-image: url('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="solo-card-body">
+                            <h3>Jiu-Jitsu</h3>
+                            <p class="solo-meta">2-3x por semana · Todos os níveis</p>
+                            <div class="price">R$ <span class="amount" data-monthly="89.90">89,90</span><small>/mês</small></div>
+                            <a href="contato.html?plano=jiu-jitsu" class="btn btn-outline">Assinar</a>
+                        </div>
+                    </div>
+
+                    <div class="solo-card reveal" data-mod="boxe">
+                        <div class="solo-card-img" style="background-image: url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="solo-card-body">
+                            <h3>Boxe</h3>
+                            <p class="solo-meta">Técnica + condicionamento</p>
+                            <div class="price">R$ <span class="amount" data-monthly="79.90">79,90</span><small>/mês</small></div>
+                            <a href="contato.html?plano=boxe" class="btn btn-outline">Assinar</a>
+                        </div>
+                    </div>
+
+                    <div class="solo-card reveal" data-mod="cross">
+                        <div class="solo-card-img" style="background-image: url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="solo-card-body">
+                            <h3>Cross Training</h3>
+                            <p class="solo-meta">Alta intensidade · WODs diários</p>
+                            <div class="price">R$ <span class="amount" data-monthly="89.90">89,90</span><small>/mês</small></div>
+                            <a href="contato.html?plano=cross" class="btn btn-outline">Assinar</a>
+                        </div>
+                    </div>
+
+                    <div class="solo-card reveal" data-mod="funcional">
+                        <div class="solo-card-img" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="solo-card-body">
+                            <h3>Funcional</h3>
+                            <p class="solo-meta">Agilidade, core e resistência</p>
+                            <div class="price">R$ <span class="amount" data-monthly="69.90">69,90</span><small>/mês</small></div>
+                            <a href="contato.html?plano=funcional" class="btn btn-outline">Assinar</a>
+                        </div>
+                    </div>
+
+                    <div class="solo-card reveal" data-mod="yoga">
+                        <div class="solo-card-img" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="solo-card-body">
+                            <h3>Yoga</h3>
+                            <p class="solo-meta">Flexibilidade e equilíbrio</p>
+                            <div class="price">R$ <span class="amount" data-monthly="69.90">69,90</span><small>/mês</small></div>
+                            <a href="contato.html?plano=yoga" class="btn btn-outline">Assinar</a>
+                        </div>
+                    </div>
+
+                    <div class="solo-card reveal" data-mod="spinning">
+                        <div class="solo-card-img" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="solo-card-body">
+                            <h3>Spinning</h3>
+                            <p class="solo-meta">Queima calórica intensa</p>
+                            <div class="price">R$ <span class="amount" data-monthly="69.90">69,90</span><small>/mês</small></div>
+                            <a href="contato.html?plano=spinning" class="btn btn-outline">Assinar</a>
+                        </div>
+                    </div>
+
+                    <div class="solo-card reveal" data-mod="massagem">
+                        <div class="solo-card-img" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="solo-card-body">
+                            <h3>Pacote Massagem</h3>
+                            <p class="solo-meta">4 sessões mensais agendadas</p>
+                            <div class="price">R$ <span class="amount" data-monthly="199.90">199,90</span><small>/mês</small></div>
+                            <a href="contato.html?plano=massagem" class="btn btn-outline">Assinar</a>
+                        </div>
+                    </div>
+
+                    <div class="solo-card reveal" data-mod="musculacao">
+                        <div class="solo-card-img" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="solo-card-body">
+                            <h3>Musculação Solo</h3>
+                            <p class="solo-meta">Acesso livre à sala</p>
+                            <div class="price">R$ <span class="amount" data-monthly="79.90">79,90</span><small>/mês</small></div>
+                            <a href="contato.html?plano=musculacao" class="btn btn-outline">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diárias -->
+            <div class="plan-section" data-section="diarias">
+                <p class="text-center reveal" style="color: var(--text-secondary); margin-bottom: 30px; font-size: 0.95rem;">Vai treinar só um dia? <span class="text-accent">Sem fidelidade.</span> Pague apenas a diária.</p>
+                <ul class="daily-price-list reveal">
+                    <li>
+                        <span class="dp-name">Musculação</span>
+                        <span class="dp-value">R$ 20<small>/dia</small></span>
+                    </li>
+                    <li>
+                        <span class="dp-name">Aulas coletivas <em>(Yoga, Funcional, Spinning)</em></span>
+                        <span class="dp-value">R$ 25<small>/dia</small></span>
+                    </li>
+                    <li>
+                        <span class="dp-name">Lutas <em>(Jiu-Jitsu, Boxe, Cross Training)</em></span>
+                        <span class="dp-value">R$ 35<small>/dia</small></span>
+                    </li>
+                    <li>
+                        <span class="dp-name">Massagem terapêutica</span>
+                        <span class="dp-value">R$ 55<small>/sessão</small></span>
+                    </li>
+                </ul>
+                <div class="text-center reveal" style="margin-top: 30px;">
+                    <a href="contato.html?plano=diaria" class="btn btn-primary">Reservar Diária</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo">IRON PEAK</h3>
+                    <p>Sua jornada para a excelência física começa aqui.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Endereço</h3>
+                    <p>Rua Tabosa Facundo - Centro</p>
+                    <p>Canindé - CE, CEP 62700</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>(85) 99999-9999</p>
+                    <p>contato@ironpeak.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Iron Peak Gym. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="chatbot.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
