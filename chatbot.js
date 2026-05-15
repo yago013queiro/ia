@@ -5,7 +5,7 @@
 
 // A chave deve ser definida localmente em um arquivo não comitado (por exemplo, config.js).
 // Exemplo de arquivo local: window.GEMINI_API_KEY = 'SUA_CHAVE_API_AQUI';
-const DEFAULT_GEMINI_API_KEY = 'AIzaSyCmOoqmD9RMuCaGchS7dSEFS5CF232XykA';
+const DEFAULT_GEMINI_API_KEY = '';
 
 const SYSTEM_PROMPT = `
 Você é o assistente virtual sênior da academia IRON PEAK. 
@@ -186,7 +186,8 @@ function initChatbot() {
     }
 
     function getGeminiApiKey() {
-        return window.GEMINI_API_KEY || DEFAULT_GEMINI_API_KEY;
+        const configuredKey = window.GEMINI_API_KEY || DEFAULT_GEMINI_API_KEY;
+        return configuredKey && configuredKey !== 'SUA_CHAVE_API_AQUI' ? configuredKey : '';
     }
 
     async function callGeminiAPI(userMessage) {
