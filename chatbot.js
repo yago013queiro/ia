@@ -71,8 +71,19 @@ function initChatbot() {
     const sendBtn = document.getElementById('sendChat');
     const messagesEl = document.getElementById('chatbotMessages');
 
-    openBtn.onclick = () => { windowEl.classList.add('active'); openBtn.style.display = 'none'; };
-    closeBtn.onclick = () => { windowEl.classList.remove('active'); openBtn.style.display = 'flex'; };
+    openBtn.onclick = () => {
+        windowEl.classList.add('active');
+        openBtn.style.display = 'none';
+        inputEl.focus();
+    };
+    closeBtn.onclick = () => {
+        windowEl.classList.remove('active');
+        openBtn.style.display = 'flex';
+    };
+
+    inputEl.addEventListener('mousedown', () => inputEl.focus());
+    inputEl.style.pointerEvents = 'auto';
+    windowEl.style.pointerEvents = 'auto';
 
     const addMsg = (text, side) => {
         const div = document.createElement('div');
@@ -108,7 +119,12 @@ function initChatbot() {
     };
 
     sendBtn.onclick = handleSend;
-    inputEl.onkeypress = (e) => e.key === 'Enter' && handleSend();
+    inputEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            handleSend();
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', initChatbot);
